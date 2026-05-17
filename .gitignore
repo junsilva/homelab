@@ -1,0 +1,15 @@
+# Secrets & Credentials
+*.env
+*.secret
+credentials/
+inventory.ini
+*.vault
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# OS Specific
+Thumbs.db
+.DS_Store
