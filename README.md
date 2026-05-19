@@ -30,7 +30,7 @@ Start small and use a capable second hand workstation.  Build my way to multiple
 ### Virtual Environments (VMs/LXCs)
 | Host | Name (ID) | Type | Role | OS | CPU | Memory | Storage |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| olympus | mnemosyne (100) | LXC | Manage network shares | Ubuntu | 2 Cores | 4 GB | 16 GB |
+| olympus | [mnemosyne (100)](./docs/vm_setup/mnemosyne_details.md#mnemosyne) | LXC | Manage network shares | Ubuntu | 2 Cores | 4 GB | 16 GB |
 |  | apollo (101) | VM | Host *Arr Stack | Linux | 4 Cores | 10 GB | 64 GB |
 |  | dionysus (102) | VM | Host media services | Linux | 4 Cores | 6 GB | 100 GB |  
 
