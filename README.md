@@ -23,9 +23,9 @@ homelab/
 Start small and use a capable second hand workstation.  Build my way to multiple nodes eventually.  When I get the time and money, I'd like a separate NAS and a beefy one to hose local LLMs.  With RAM-pocalypse, will have to wait for a while...
 
 ### Physical Nodes
-| Node Name | Role | OS | Model | CPU | Memory | Storage (SSD) | Storage (SATA) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| olympus | Main compute node | Proxmox VE | HP Elitedesk 800 G6 SFF | Intel i7-10700 (8C/16T) | 32 GB | 1 TB NVMe | 2 x 8TB (WD Reds) |
+| Node Name | Role | OS | Model |
+| :--- | :--- | :--- | :--- | 
+| [olympus](./docs/node_setup/olympus.md#olympus) | Main compute node | Proxmox VE | HP Elitedesk 800 G6 SFF | 
 
 ### Virtual Environments (VMs/LXCs)
 | Host | Name (ID) | Type | Role | OS | CPU | Memory | Storage |
