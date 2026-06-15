@@ -21,8 +21,6 @@ Proxmox setup details for the VM
 
 Docker compose file for services hosted by apollo is [here](/docker/apollo/docker-compose.yml).  I still haven't decided if I want to break things up into separate smaller docker files for each service to help keep things a bit more modular.  But so far, leaned more into simplifying things.  Not much benefit at the moment to break things off into smaller files.
 
----
-
 ## Mounts
 
 ### App Mount
@@ -43,19 +41,6 @@ I also wanted to try to harden the mount and store creds as separate credential 
 * **Credentials Secret File:** `/etc/samba/creds_apollo`
 * **FSTAB Options Blueprint:** `iocharset=utf8,noperm,nounix,file_mode=0775,dir_mode=0775`
 * **Active Mount Identity:** Enforced via UID `1000` (`jun_admin`) and primary GID `1101` (`media`) to guarantee write persistence across services.
-
----
-
-## Privacy and Network Hardening
-I wanted to ensure privacy and decided to use VPNs in front of my *Arr stack.  I used Gluetun as the service to help tie things together.  
-
-### VPN (Gluetun VPN)
-A dedicated `gluetun` container establishes an encrypted WireGuard tunnel using ProtonVPN. 
-* **Container Bind Mode:** Publicly exposed download clients (`qbittorrent`, `nzbget`) alongside indexer tools (`prowlarr`, `flaresolverr`) utilize `network_mode: service:gluetun`. 
-* **LAN Exposure:** Web interfaces for isolated applications are bound directly and handled securely through ports opened on the `gluetun` perimeter container.
-* **Port Management:** A custom initialization sequence dynamically passes incoming port forwarding maps directly down to the `qbittorrent` runtime daemon.
-
----
 
 ## Core Container Manifest
 
