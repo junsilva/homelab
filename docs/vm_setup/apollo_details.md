@@ -46,14 +46,14 @@ I also wanted to try to harden the mount and store creds as separate credential 
 
 | Container Name | Web UI Port | Volume | Notes |
 | :--- | :--- | :--- | :--- |
-| **gluetun** | — | — | Outbound wireguard stack handler |
-| **qbittorrent** | `8080` | `/torrents` | Networked via Gluetun |
-| **nzbget** | `6789` | `/usenet` | Networked via Gluetun |
-| **prowlarr** | `9696` | — | |
+| [gluetun](/docs/services/gluetun.md#gluetun) | — | — | Outbound wireguard stack handler |
+| [qbittorrent](/docs/services/qbittorrent.md) | `8080` | `/torrents` | Networked via Gluetun |
+| [nzbget](/docs/services/nzbget.md) | `6789` | `/usenet` | Networked via Gluetun |
+| [prowlarr](/docs/services/prowlarr.md) | `9696` | — | |
 | **sonarr** | `8989` | `/media/tv` | |
+| **sonarr-anime**| `8990` | `/media/anime` | |
 | **radarr** | `7878` | `/media/movies` | |
 | **lidarr** | `8686` | `/media/music` | |
-| **sonarr-anime**| `8990` | `/media/anime` | |
 | **mylar3** | `8090` | `/media/books/comics` |  |
 | **lazylibrarian**| `5299` | `/media/books` |  |
 | **bazarr** | `6767` | `/media` | |
